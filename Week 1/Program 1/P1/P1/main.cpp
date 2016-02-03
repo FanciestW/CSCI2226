@@ -6,6 +6,7 @@
 
 #include "tools.hpp"
 
+
 void compress(ifstream& input, ofstream& output);
 void decompress(ifstream& input, ofstream& output);
 
@@ -39,6 +40,9 @@ int main() {
     bye();
 }
 
+/*=============================================================================
+This works
+=============================================================================*/
 void compress(ifstream& input, ofstream& output){
     char c, k;
     int counter = 1;
@@ -47,7 +51,7 @@ void compress(ifstream& input, ofstream& output){
         input.get(k);
         if(c == k){
             if(counter >= 255){
-                output << (char)127 << c << counter;
+                output << (unsigned char)255 << c << (unsigned char)counter;
                 counter = 1;
             }
             else counter++;
@@ -59,23 +63,27 @@ void compress(ifstream& input, ofstream& output){
                 counter = 1;
             }
             else{
-                output << (char)127 << c << counter;
+                output << (unsigned char)255 << c << (unsigned char)counter;
                 c = k;
                 counter = 1;
             }
             
         }
     }
+    output << c;
 }
 
+/*=============================================================================
+This does NOT work
+=============================================================================*/
 void decompress(ifstream& input, ofstream& output){
     char c, ch, count;
     while(!input.eof()){
         input.get(c);
-        if(c == (char)127){
+        if(c == (char)255){
             input.get(ch);
             input.get(count);
-            output << string(count, (int)ch);
+            output << string((int)count, (int)ch);
         }
         else output << c;
     }

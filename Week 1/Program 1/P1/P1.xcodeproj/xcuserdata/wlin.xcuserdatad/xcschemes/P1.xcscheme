@@ -47,7 +47,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/wlin/OneDrive/UNH/Data Structures/Program 1"
+      customWorkingDirectory = "/Users/wlin/OneDrive/UNH/Data Structures/Week 1/Program 1"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
