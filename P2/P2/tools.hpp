@@ -8,7 +8,7 @@
 // ---------------------------------------------------------------------------
 #pragma once
 #define NAME    "Alice Fischer"
-#define CLASS   "CS 2226"
+#define CLASS   "CS 2212"
 
 #include <iostream>
 #include <fstream>

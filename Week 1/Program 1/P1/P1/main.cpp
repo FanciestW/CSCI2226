@@ -22,7 +22,7 @@ int main() {
     cin >> targetName;
     ifstream input = ifstream(fileName);
     ofstream output = ofstream(targetName);
-    if(input.is_open() && output.is_open()){
+    if(input && output){
         switch(choice){
             case 1:
                 compress(input, output);
@@ -34,7 +34,7 @@ int main() {
                 cout << "Invalid Choice" << endl;
                 break;
         }
-    }
+    } else cout << "File Error" << endl;
     input.close();
     output.close();
     bye();
@@ -47,8 +47,9 @@ void compress(ifstream& input, ofstream& output){
     char c, k;
     int counter = 1;
     input.get(c);
-    while(!input.eof()){
+    for(;;){
         input.get(k);
+        if(input.eof()) break;
         if(c == k){
             if(counter >= 255){
                 output << (unsigned char)255 << c << (unsigned char)counter;
@@ -77,9 +78,11 @@ void compress(ifstream& input, ofstream& output){
 This does NOT work
 =============================================================================*/
 void decompress(ifstream& input, ofstream& output){
+    cout << "De-compression non-functional" << endl;
     char c, ch, count;
-    while(!input.eof()){
+    for(;;){
         input.get(c);
+        if(input.eof()) break;
         if(c == (char)255){
             input.get(ch);
             input.get(count);
