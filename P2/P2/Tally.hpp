@@ -8,7 +8,7 @@ private:
     ifstream& input;
     
 public:
-    Tally( ifstream& input):input(input){ }
+    Tally( ifstream& input ):input( input ){ }
     void doTally();
     void print();
     void pretty();

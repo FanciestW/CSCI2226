@@ -3,8 +3,8 @@
 void Tally::doTally(){
     for(;;){
         char c;
-        if(input.eof()) break;
         input.get(c);
+        if(input.eof()) break;
         tal[(int)c]++;
     }
 }
@@ -18,6 +18,6 @@ void Tally::print(){
 //Prints easy to read results
 void Tally::pretty(){
     for(int k = 0; k < 256; k++){
-        cout << (char)k << ": " << tal[k] << endl;
+        if(tal[k] != 0) cout << (char)k << ": " << tal[k] << endl;
     }
 }
