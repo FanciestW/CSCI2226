@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1BD54411C9A0A8100A3BB3B /* tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1BD543F1C9A0A8100A3BB3B /* tools.cpp */; };
 		D1BD94241C8A0F620052FA95 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1BD94231C8A0F620052FA95 /* main.cpp */; };
+		D1DAFE2E1CA31A06004DD084 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1DAFE2C1CA31A06004DD084 /* Queue.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D1BD543E1C9A0A8100A3BB3B /* short.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = short.txt; sourceTree = "<group>"; };
+		D1BD543F1C9A0A8100A3BB3B /* tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tools.cpp; sourceTree = "<group>"; };
+		D1BD54401C9A0A8100A3BB3B /* tools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tools.hpp; sourceTree = "<group>"; };
 		D1BD94201C8A0F620052FA95 /* P4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = P4; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BD94231C8A0F620052FA95 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D1DAFE2C1CA31A06004DD084 /* Queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Queue.cpp; sourceTree = "<group>"; };
+		D1DAFE2D1CA31A06004DD084 /* Queue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
+		D1DAFE301CA31A13004DD084 /* Cell.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Cell.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +65,13 @@
 		D1BD94221C8A0F620052FA95 /* P4 */ = {
 			isa = PBXGroup;
 			children = (
+				D1BD543E1C9A0A8100A3BB3B /* short.txt */,
+				D1BD543F1C9A0A8100A3BB3B /* tools.cpp */,
+				D1BD54401C9A0A8100A3BB3B /* tools.hpp */,
 				D1BD94231C8A0F620052FA95 /* main.cpp */,
+				D1DAFE2C1CA31A06004DD084 /* Queue.cpp */,
+				D1DAFE2D1CA31A06004DD084 /* Queue.hpp */,
+				D1DAFE301CA31A13004DD084 /* Cell.hpp */,
 			);
 			path = P4;
 			sourceTree = "<group>";
@@ -118,7 +132,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1DAFE2E1CA31A06004DD084 /* Queue.cpp in Sources */,
 				D1BD94241C8A0F620052FA95 /* main.cpp in Sources */,
+				D1BD54411C9A0A8100A3BB3B /* tools.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +253,7 @@
 				D1BD94291C8A0F620052FA95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

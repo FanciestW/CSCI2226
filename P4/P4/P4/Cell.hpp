@@ -1,14 +1,23 @@
-//
-//  Cell.hpp
-//  P4
-//
-//  Created by William Lin on 3/23/16.
-//  Copyright © 2016 William Lin. All rights reserved.
-//
+/*
+ William Lin
+ CSCI 2226
+ Program 4
+ */
 
 #ifndef Cell_hpp
 #define Cell_hpp
 
-#include <stdio.h>
+#include "tools.hpp"
+
+class Cell{
+    
+    friend class Queue;
+    
+private:
+    unsigned long time;
+    float temp;
+    Cell* next;
+    Cell(unsigned long t, float tem, Cell* nx = nullptr) : time(t), temp(tem), next(nx){}
+};
 
 #endif /* Cell_hpp */
