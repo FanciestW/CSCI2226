@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D19FE2121CB94C320098A3F6 /* Sorter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19FE2101CB94C320098A3F6 /* Sorter.cpp */; };
 		D1BD54411C9A0A8100A3BB3B /* tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1BD543F1C9A0A8100A3BB3B /* tools.cpp */; };
 		D1BD94241C8A0F620052FA95 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1BD94231C8A0F620052FA95 /* main.cpp */; };
 		D1DAFE2E1CA31A06004DD084 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1DAFE2C1CA31A06004DD084 /* Queue.cpp */; };
@@ -25,7 +26,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D1BD543E1C9A0A8100A3BB3B /* short.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = short.txt; sourceTree = "<group>"; };
+		D12A29891CBD86EB00610917 /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
+		D12A298A1CBFE0F400610917 /* sensor_01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sensor_01.txt; sourceTree = "<group>"; };
+		D12A298B1CBFE17100610917 /* output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
+		D19FE2101CB94C320098A3F6 /* Sorter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sorter.cpp; sourceTree = "<group>"; };
+		D19FE2111CB94C320098A3F6 /* Sorter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sorter.hpp; sourceTree = "<group>"; };
 		D1BD543F1C9A0A8100A3BB3B /* tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tools.cpp; sourceTree = "<group>"; };
 		D1BD54401C9A0A8100A3BB3B /* tools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tools.hpp; sourceTree = "<group>"; };
 		D1BD94201C8A0F620052FA95 /* P4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = P4; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,13 +70,17 @@
 		D1BD94221C8A0F620052FA95 /* P4 */ = {
 			isa = PBXGroup;
 			children = (
-				D1BD543E1C9A0A8100A3BB3B /* short.txt */,
+				D12A298A1CBFE0F400610917 /* sensor_01.txt */,
+				D12A29891CBD86EB00610917 /* text.txt */,
 				D1BD543F1C9A0A8100A3BB3B /* tools.cpp */,
 				D1BD54401C9A0A8100A3BB3B /* tools.hpp */,
 				D1BD94231C8A0F620052FA95 /* main.cpp */,
 				D1DAFE2C1CA31A06004DD084 /* Queue.cpp */,
 				D1DAFE2D1CA31A06004DD084 /* Queue.hpp */,
+				D19FE2101CB94C320098A3F6 /* Sorter.cpp */,
+				D19FE2111CB94C320098A3F6 /* Sorter.hpp */,
 				D1DAFE301CA31A13004DD084 /* Cell.hpp */,
+				D12A298B1CBFE17100610917 /* output.txt */,
 			);
 			path = P4;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 			files = (
 				D1DAFE2E1CA31A06004DD084 /* Queue.cpp in Sources */,
 				D1BD94241C8A0F620052FA95 /* main.cpp in Sources */,
+				D19FE2121CB94C320098A3F6 /* Sorter.cpp in Sources */,
 				D1BD54411C9A0A8100A3BB3B /* tools.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

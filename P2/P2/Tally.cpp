@@ -21,3 +21,4 @@ void Tally::pretty(){
         if(tal[k] != 0) cout << (char)k << ": " << tal[k] << endl;
     }
 }
+

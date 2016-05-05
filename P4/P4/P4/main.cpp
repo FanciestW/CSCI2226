@@ -4,7 +4,7 @@
  Program 4
  */
 
-#include "Queue.hpp"
+#include "Sorter.hpp"
 #include <string>
 
 unsigned long getTime(string line);
@@ -16,24 +16,23 @@ int main(int argc, const char * argv[]) {
     banner();
     string fileName;
     Queue masterQ = *new Queue();
-    cout << "File Name: ";
-    cin >> fileName;
-    ifstream input(fileName);
+    ifstream input("sensor_01.txt");
     
     if(input.is_open()){
         
         for(;;){
             string line;
             getline(input, line);
+            masterQ.insert(line, getTime(line), getTemp(line));
             if(input.eof()) break;
-            masterQ.insert(getTime(line), getTemp(line));
         }
         
     } else cout << "File Error" << endl;
     
-    masterQ.print(cout);
-    cout << string(50, '-') << endl;
-    masterQ.sort(0);
+    Sorter sorter(masterQ);
+    sorter.sort();
+    
+    bye();
     
 }
 

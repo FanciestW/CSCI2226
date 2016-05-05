@@ -11,8 +11,10 @@
 
 class Queue{
 
+    friend class Sorter;
+    
 private:
-    Cell* head = new Cell(0, 0);
+    Cell* head = new Cell("", 0, 0);
     Cell* tail = head;
     Cell* scan = nullptr;
     Cell* follow = nullptr;
@@ -23,11 +25,10 @@ public:
     int size(){ return count; }
     bool isempty(){ return count == 0; }
     ~Queue();
-    void find(unsigned long time);
-    void insert(unsigned long time, float temp);
-    void remove(unsigned long time);
+    void insert(string text, unsigned long time, float temp);
     void print(ostream& out);
-    void sort(int n);
+    void clear();
+    void concat(Queue q);
 };
 
 #endif /* Queue_hpp */

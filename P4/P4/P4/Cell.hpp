@@ -12,12 +12,14 @@
 class Cell{
     
     friend class Queue;
+    friend class Sorter;
     
 private:
+    string text;
     unsigned long time;
     float temp;
     Cell* next;
-    Cell(unsigned long t, float tem, Cell* nx = nullptr) : time(t), temp(tem), next(nx){}
+    Cell(string txt, unsigned long t, float tem, Cell* nx = nullptr) : text(txt), time(t), temp(tem), next(nx){}
 };
 
 #endif /* Cell_hpp */
