@@ -11,14 +11,15 @@ class Node{
 private:
     char c;
     int freq;
-    Node *left, *right;
+    Node *left = nullptr;
+    Node *right = nullptr;
     
 public:
     Node() = default;
     ~Node() = default;
     Node(char c, int freq):c(c), freq(freq){}
     Node(Node *tleft, Node *tright):left(tleft), right(tright){
-        c = '\n';
+        c = '*';
         freq = tleft->freq + tright->freq;
     }
     void print(ostream& out);

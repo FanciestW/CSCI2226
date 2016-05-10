@@ -32,27 +32,67 @@ void Heap::buildHeap(){
     }
 }
 
+void Heap::downHeap( int start, Node* key ) {
+    int father = start;	int son, rson;
+    
+    for (;;) {
+        son = 2*father;
+        rson = son + 1;
+        if (son > vect.size()) break;        // This is off the end of the tree.
+        if (rson <= vect.size() && vect[son]->freq > vect[rson]->freq) son = rson;
+        if ( key->freq <= vect[son]->freq ) break;
+        vect[father] = vect[son];
+        father = son;
+    }
+    vect[father] = key;
+}
+
+void Heap::upHeap(int pos, Node* key){
+    int son = pos;
+    int father;
+    
+    while (son>1) {
+        father = son/2;
+        cout << father << endl;
+        if ( vect[father] <= key ) break;
+        vect[son] = vect[father];
+        son = father;
+    }
+    vect[son] = key;
+    cout << son << endl;
+}
+
 //TODO: Change print to print tree.
 /*
  Prints the heap based on frequency only
  */
 void Heap::printHeap(){
     for(int k = 0; k < vect.size(); k++){
-        cout << vect.at(k)->freq;
+        if(isprint((int)vect[k]->c)) cout << vect[k]->freq << ": " << vect[k]->c << "| ";
+        else cout << vect[k]->freq << ": " << (int)vect[k]->c << "| ";
     }
     cout << endl;
 }
 
-/*
- Adds a node to end of the heap
- */
 void Heap::push(Node *node){
     vect.push_back(node);
+    printHeap();
 }
 
-/*
- Removes the last node of the heap
- */
-void:: Heap::pop(){
-    vect.erase(vect.end());
+void Heap::pop(){
+    vect.at(1) = vect.at(vect.size()-1);
+    vect.erase(vect.end()-1);
+    printHeap();
+}
+
+void Heap::reduceHeap(){
+    Node* node1 = vect[1];
+    pop();
+    downHeap(1, vect[1]);
+    Node* node2 = vect[1];
+    pop();
+    downHeap(1, vect[1]);
+    Node* finNode = new Node(node1, node2);
+    push(finNode);
+    upHeap((int)vect.size()-1, finNode);
 }

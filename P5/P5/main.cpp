@@ -8,9 +8,11 @@ int main(){
         tally.doTally();
         tally.pretty();
         Heap heap = *new Heap(tally);
-        heap.printHeap();
         heap.buildHeap();
-        heap.printHeap();
+        for(int k = 0; k < 8; k++){
+            heap.reduceHeap();
+            heap.printHeap();
+        }
     } else cout << "Error" << endl;
     bye();
 }

@@ -8,9 +8,6 @@ class Heap{
 private:
     vector<Node*> vect;
     Tally tally;
-    void	downHeap( int start, Node* key );
-    void	upHeap( int start, Node* key  );
-    void	heapify();
     
 public:
     Heap() = default;
@@ -20,9 +17,11 @@ public:
     void	heapSort();
     void	printHeap();
     void    buildHeap();
+    void    downHeap(int pos, Node* key);
+    void    upHeap(int pos, Node* key);
     void    push(Node* node);
     void    pop();
-    
+    void    reduceHeap();
 };
 
 #endif /* Heap_hpp */
