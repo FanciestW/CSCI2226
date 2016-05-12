@@ -53,19 +53,13 @@ void Heap::upHeap(int pos, Node* key){
     
     while (son>1) {
         father = son/2;
-        cout << father << endl;
         if ( vect[father] <= key ) break;
         vect[son] = vect[father];
         son = father;
     }
     vect[son] = key;
-    cout << son << endl;
 }
 
-//TODO: Change print to print tree.
-/*
- Prints the heap based on frequency only
- */
 void Heap::printHeap(){
     for(int k = 0; k < vect.size(); k++){
         if(isprint((int)vect[k]->c)) cout << vect[k]->freq << ": " << vect[k]->c << "| ";
@@ -74,15 +68,18 @@ void Heap::printHeap(){
     cout << endl;
 }
 
+//TODO: Finish code to print huffman tree of Node* in heap position 1
+void Heap::printTree(){
+    
+}
+
 void Heap::push(Node *node){
     vect.push_back(node);
-    printHeap();
 }
 
 void Heap::pop(){
     vect.at(1) = vect.at(vect.size()-1);
     vect.erase(vect.end()-1);
-    printHeap();
 }
 
 void Heap::reduceHeap(){

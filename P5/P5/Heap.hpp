@@ -16,6 +16,7 @@ public:
     Node*   remove();
     void	heapSort();
     void	printHeap();
+    void    printTree();
     void    buildHeap();
     void    downHeap(int pos, Node* key);
     void    upHeap(int pos, Node* key);

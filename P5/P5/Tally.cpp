@@ -18,7 +18,10 @@ void Tally::print(){
 //Prints easy to read results
 void Tally::pretty(){
     for(int k = 0; k < 256; k++){
-        if(tal[k] != 0) cout << (char)k << ": " << tal[k] << endl;
+        if(tal[k] != 0){
+            if(isprint((char)k)) cout << (char)k << ": " << tal[k] << endl;
+            else cout << k << ": " << tal[k] << endl;
+        }
     }
 }
 
