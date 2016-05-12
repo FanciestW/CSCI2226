@@ -12,6 +12,7 @@ int main(){
         for(int k = 0; k < 8; k++){
             heap.reduceHeap();
         }
+        heap.printTree();
     } else cout << "Error" << endl;
     bye();
 }
