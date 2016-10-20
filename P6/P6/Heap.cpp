@@ -17,33 +17,33 @@ void Heap::buildHeap(){
     int leaf = (int)vect.size()/2;
     for(int k = leaf; k > 0; k--){
         downHeap(k, vect[k]);
-        cout << k << " completed" << endl;
+//        cout << k << " completed" << endl;
     }
 }
 
 void Heap::downHeap( int start, Node* key ) {
-    cout << "downHeap(" << start << ", vect[" << start << "])" << endl;
+//    cout << "downHeap(" << start << ", vect[" << start << "])" << endl;
     int father = start;	int son, rson;
     for (;;) {
         son = 2*father;
         rson = son + 1;
         if (son >= vect.size()){
-            cout << "End of tree" << endl;
+//            cout << "End of tree" << endl;
             break;  // This is off the end of the tree.
         }
         if (rson <= vect.size() && vect[son]->freq > vect[rson]->freq){
             son = rson;
-            cout << "son = rson" << endl;
+//            cout << "son = rson" << endl;
         }
         if ( key->freq <= vect[son]->freq ){
-            cout << "break" << endl;
+//            cout << "break" << endl;
             break;
         }
         vect[father] = vect[son];
         father = son;
-        cout << "father and son swap" << endl;
+//        cout << "father and son swap" << endl;
     }
-    cout << "downHeap() loop finished" << endl;
+//    cout << "downHeap() loop finished" << endl;
     vect[father] = key;
 }
 

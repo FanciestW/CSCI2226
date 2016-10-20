@@ -2,16 +2,19 @@
 #define Heap_hpp
 
 #include "Node.hpp"
+#include <map>
 
 class Heap{
+    
     
 private:
     Tally tally;
     
 public:
+    std::map<char, string> map;
     vector<Node*> vect;
     Heap() = default;
-    Heap( Tally tally);
+    Heap(Tally tally);
     void    insert( Node* key );
     Node*   remove();
     void	heapSort();
